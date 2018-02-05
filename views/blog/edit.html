@@ -1,0 +1,29 @@
+﻿<a href="#/blog">Go Back</a>
+<div ng-init="getBlog()">
+    <div id="blogView" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{blog.title}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-4"><img ng-src="{{blog.imgUrl}} class=" pull-left img-responsive thumb margin 10 img-thumbnail" /></div>
+                <div class="col-sm-8"><p>{{blog.description}}</p> ></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blogedit" class="text-left">
+        <table>
+            <tr class="row blogShort">
+                <td class="col-sm-6" ng-switch="blog.type" width="150px" height="100px">
+                    <img ng-switch-when="text" ng-src="{{blog.imgUrl}}" alt="post img" class="pull-left img-responsive thumb margin 10 img-thumbnail" />
+                    <iframe ng-switch-when="video"
+                            ng-src="{{blog.url}}"></iframe>
+                </td>
+                <td class="col-sm-6">
+                    <h3>{{blog.title}}</h3><article><p>{{blog.description}}</p></article>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

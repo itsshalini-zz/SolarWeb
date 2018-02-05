@@ -1,0 +1,20 @@
+<div id="consumer" ng-init="initAutocomplete()">
+    <a class="btn btn-primary col-sm-5" ng-click="setupRoof()">Setup my Roof-top Solar</a>
+    <div class="col-sm-2"></div>
+    <a class="btn btn-primary col-sm-5" href="#/blog">Read Stories of other consumers</a>
+    <div ng-show="setRoof" id="locationField">
+        Location
+        <input type="text" id="autocomplete" class="text" placeholder="Enter your address" ng-model="address">
+        <div name="getWeatherReport" class="btn btn-default" ng-click="getWeatherReport()">Go</div>
+        <div>
+            <table>
+                <tr><th>{{address}}</th></tr>
+                <tr><td>Latitude</td><td>{{latitude}}</td></tr>
+                <tr><td>Longitute</td><td>{{longitute}}</td></tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+  		
+  		
