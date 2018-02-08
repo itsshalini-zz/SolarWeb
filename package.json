@@ -1,0 +1,11 @@
+{
+  "assets": [
+    "assets",
+    "favicon.ico",
+    {
+      "glob": "package.json",
+      "input": "./server/",
+      "output": "./"
+    }
+  ]
+}
